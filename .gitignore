@@ -1,0 +1,14 @@
+node_modules/
+.venv/
+backend/.venv/
+.env
+.env.local
+.env.*.local
+backend/*.db
+backend/*.sqlite3
+__pycache__/
+*.py[cod]
+.pytest_cache/
+dist/
+*.log
+

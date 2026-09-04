@@ -1,0 +1,6 @@
+{
+  "name": "RecoverIQ",
+  "description": "AI Revenue Recovery Intelligence control tower for failed and at-risk payments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
