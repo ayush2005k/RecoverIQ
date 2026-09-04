@@ -15,11 +15,16 @@ export const StrategyAnalyticsView: React.FC<StrategyAnalyticsViewProps> = ({ su
     <div className="space-y-6 pb-12">
       {/* Header */}
       <div className="pb-4 border-b border-[#E6E2D8]">
-        <h1 className="text-2xl sm:text-3xl font-bold font-serif-editorial tracking-tight text-stone-900">
-          Baseline Benchmark & Lift Attribution
-        </h1>
+        <div className="flex items-center gap-2.5">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-900 font-bold bg-indigo-50 px-2 py-0.5 border border-indigo-300">
+            ACME COMMERCE
+          </span>
+          <h1 className="text-2xl sm:text-3xl font-bold font-serif-editorial tracking-tight text-stone-900">
+            Baseline Benchmark & Lift Attribution
+          </h1>
+        </div>
         <p className="text-xs sm:text-sm text-stone-600 font-serif-editorial italic mt-0.5">
-          Comparative empirical performance of AI expected-value orchestration vs static naive retry loops
+          Comparative empirical performance of Acme Commerce AI expected-value orchestration vs static naive retry loops
         </p>
       </div>
 

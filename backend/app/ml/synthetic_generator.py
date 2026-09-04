@@ -53,9 +53,11 @@ def generate_synthetic_dataset(num_records: int = 3000, seed: int = 42) -> Tuple
             hist_rate = round(succ / (succ + fail), 3)
             avg_lat = round(random.uniform(2.0, 6.0), 1)
             fatigue = round(random.uniform(0.5, 3.0), 1)
-            company_names = ["Infosys Corp", "TCS Digital", "Swiggy Cloud", "Zomato Ops", "Flipkart Logistics", "Razorpay X", "Zepto Fast", "Cred Tech"]
-            name = f"{random.choice(company_names)} ({i+1})"
-            email = f"finance{i+1}@{name.split()[0].lower()}.in"
+            enterprise_customers = ["Rajesh Singhania", "Sunita Narang", "Aditya Birla", "Deepak Parekh", "Kiran Mazumdar", "Harsh Goenka", "Naveen Jindal", "Anand Mahindra"]
+            raw_name = random.choice(enterprise_customers)
+            name = f"{raw_name} ({i+1})"
+            clean_email_prefix = raw_name.lower().replace(" ", ".")
+            email = f"{clean_email_prefix}{i+1}@acme-client.in"
         elif segment == "Growth":
             ltv = round(random.uniform(500_000, 2_500_000), 2)
             succ = random.randint(40, 150)
@@ -63,8 +65,11 @@ def generate_synthetic_dataset(num_records: int = 3000, seed: int = 42) -> Tuple
             hist_rate = round(succ / (succ + fail), 3)
             avg_lat = round(random.uniform(4.0, 12.0), 1)
             fatigue = round(random.uniform(1.0, 5.0), 1)
-            name = f"Growth Partner {i+1} LLP"
-            email = f"billing{i+1}@growth{i+1}.co"
+            growth_customers = ["Arjun Patel", "Neha Kapoor", "Vikram Malhotra", "Ananya Sen", "Rohan Iyer", "Pooja Hegde", "Kabir Singhania", "Sanjay Verma", "Aditi Rao", "Divya Nair"]
+            raw_name = growth_customers[i % len(growth_customers)]
+            name = f"{raw_name} ({i+1})"
+            clean_email_prefix = raw_name.lower().replace(" ", ".")
+            email = f"{clean_email_prefix}{i+1}@acmecustomer.co"
         elif segment == "SMB":
             ltv = round(random.uniform(50_000, 600_000), 2)
             succ = random.randint(10, 60)
@@ -72,8 +77,11 @@ def generate_synthetic_dataset(num_records: int = 3000, seed: int = 42) -> Tuple
             hist_rate = round(succ / (succ + fail), 3)
             avg_lat = round(random.uniform(6.0, 24.0), 1)
             fatigue = round(random.uniform(1.5, 7.0), 1)
-            name = f"SMB Merchant #{1000 + i}"
-            email = f"accounts{i+1}@smbmerchant{i+1}.com"
+            smb_customers = ["Amitabh Das", "Meera Joshi", "Suresh Raina", "Kavita Krishnamurthy", "Devendra Fadnavis", "Sunil Gavaskar", "Sania Mirza", "Bhaichung Bhutia"]
+            raw_name = smb_customers[i % len(smb_customers)]
+            name = f"{raw_name} ({i+1})"
+            clean_email_prefix = raw_name.lower().replace(" ", ".")
+            email = f"{clean_email_prefix}{i+1}@acmepartner.in"
         else:  # Retail
             ltv = round(random.uniform(5_000, 80_000), 2)
             succ = random.randint(2, 20)
@@ -207,7 +215,7 @@ def generate_synthetic_dataset(num_records: int = 3000, seed: int = 42) -> Tuple
         payments.append({
             "id": pay_id,
             "customer_id": customer["id"],
-            "merchant_id": "mer_recoveriq_prod",
+            "merchant_id": "mer_acme_commerce",
             "amount": amount,
             "currency": "INR",
             "payment_method": method,

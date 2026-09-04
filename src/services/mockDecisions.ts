@@ -65,7 +65,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893201',
     paymentId: 'pay_9F8aK29x',
-    customerName: 'Zomato Merchant Ops',
+    customerName: 'Rahul Sharma',
     customerSegment: 'Enterprise',
     amount: 145000,
     recoveryProbability: 0.88,
@@ -96,7 +96,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893200',
     paymentId: 'pay_7B2eM41p',
-    customerName: 'UrbanPiper CloudTech',
+    customerName: 'Priya Mehta',
     customerSegment: 'Enterprise',
     amount: 82500,
     recoveryProbability: 0.94,
@@ -127,7 +127,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893199',
     paymentId: 'pay_5R3xQ19m',
-    customerName: 'Swiggy Partner Cloud',
+    customerName: 'Rohan Iyer',
     customerSegment: 'Growth',
     amount: 38000,
     recoveryProbability: 0.74,
@@ -144,7 +144,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
     failureReason: 'customer_dropoff',
     failureCode: 'ERR_USER_ABANDONED_CHECKOUT',
     paymentMethod: 'upi',
-    paymentMethodDetails: 'swiggycloud@okaxis',
+    paymentMethodDetails: 'rohaniyer@okaxis',
     inputFeatures: {
       customerLTV: 1120000,
       historicalSuccessRate: 0.84,
@@ -158,7 +158,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893198',
     paymentId: 'pay_2W8kP74r',
-    customerName: 'Razorpay Test Merchant',
+    customerName: 'Pooja Hegde',
     customerSegment: 'Retail',
     amount: 9500,
     recoveryProbability: 0.02,
@@ -189,7 +189,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893197',
     paymentId: 'pay_1M4qX90z',
-    customerName: 'Delhivery Logistics Hub 4',
+    customerName: 'Neha Kapoor',
     customerSegment: 'Enterprise',
     amount: 52000,
     recoveryProbability: 0.81,
@@ -220,7 +220,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893196',
     paymentId: 'pay_8V5tU23b',
-    customerName: 'Licious Wholesale ColdChain',
+    customerName: 'Ananya Sen',
     customerSegment: 'Enterprise',
     amount: 210000,
     recoveryProbability: 0.85,
@@ -251,7 +251,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893195',
     paymentId: 'pay_3K9vT82w',
-    customerName: 'Kalyan Logistics Hub',
+    customerName: 'Arjun Patel',
     customerSegment: 'SMB',
     amount: 64000,
     recoveryProbability: 0.78,
@@ -282,7 +282,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893194',
     paymentId: 'pay_4P1zL67k',
-    customerName: 'Dunzo Delivery Fleet HQ',
+    customerName: 'Karan Johar',
     customerSegment: 'Enterprise',
     amount: 195000,
     recoveryProbability: 0.89,
@@ -313,7 +313,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893193',
     paymentId: 'pay_6N7mK32a',
-    customerName: 'PharmEasy Supply Distribution',
+    customerName: 'Vikram Malhotra',
     customerSegment: 'Enterprise',
     amount: 118000,
     recoveryProbability: 0.92,
@@ -344,7 +344,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893192',
     paymentId: 'pay_0B9tY45c',
-    customerName: 'Cars24 Inspection Services',
+    customerName: 'Kabir Singhania',
     customerSegment: 'Growth',
     amount: 47500,
     recoveryProbability: 0.65,
@@ -375,7 +375,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893191',
     paymentId: 'pay_5X2qW89d',
-    customerName: 'Zepto DarkStore Infra',
+    customerName: 'Aditi Rao',
     customerSegment: 'Enterprise',
     amount: 175000,
     recoveryProbability: 0.86,
@@ -406,7 +406,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893190',
     paymentId: 'pay_9L3kM18v',
-    customerName: 'Blinkit Retail Fulfillment',
+    customerName: 'Sanjay Verma',
     customerSegment: 'Enterprise',
     amount: 132000,
     recoveryProbability: 0.91,
@@ -437,7 +437,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893189',
     paymentId: 'pay_2P4rS90x',
-    customerName: 'Meesho Seller Central',
+    customerName: 'Amitabh Das',
     customerSegment: 'SMB',
     amount: 28500,
     recoveryProbability: 0.70,
@@ -449,7 +449,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
     executionStatus: 'succeeded',
     recoveredAmount: 28500,
     modelVersion: 'RecoverIQ XGB-v2.4.1 (Policy Core)',
-    aiExplanationSnippet: 'Sent multi-rail payment link after UPI mandate failed. Seller completed checkout using credit card.',
+    aiExplanationSnippet: 'Sent multi-rail payment link after UPI mandate failed. Customer completed checkout using alternate card.',
     timestamp: new Date(Date.now() - 1000 * 60 * 450).toISOString(),
     failureReason: 'mandate_invalid',
     failureCode: 'ERR_MANDATE_FREQUENCY_MISMATCH',
@@ -468,7 +468,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893188',
     paymentId: 'pay_7Q9wV12t',
-    customerName: 'Spinny Auto Retail',
+    customerName: 'Divya Nair',
     customerSegment: 'Growth',
     amount: 76000,
     recoveryProbability: 0.83,
@@ -499,7 +499,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893187',
     paymentId: 'pay_3M8jK54e',
-    customerName: 'Nykaa Merchant Logistics',
+    customerName: 'Meera Joshi',
     customerSegment: 'Enterprise',
     amount: 165000,
     recoveryProbability: 0.87,
@@ -530,7 +530,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
   {
     id: 'dec_893186',
     paymentId: 'pay_1R5tP33q',
-    customerName: 'PhonePe Merchant Ops',
+    customerName: 'Suresh Raina',
     customerSegment: 'Enterprise',
     amount: 240000,
     recoveryProbability: 0.88,

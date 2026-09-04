@@ -269,6 +269,10 @@ export const PaymentDecisionWorkspace: React.FC<PaymentDecisionWorkspaceProps> =
                   {copiedId ? <Check className="w-3.5 h-3.5 text-emerald-700" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
                 <span className="text-stone-300">•</span>
+                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-1.5 py-0.5 border border-amber-300">
+                  ACME COMMERCE
+                </span>
+                <span className="text-stone-300">•</span>
                 <PriorityBadge priority={payment.priority} />
                 <StatusBadge status={payment.status} />
               </div>
@@ -411,7 +415,7 @@ export const PaymentDecisionWorkspace: React.FC<PaymentDecisionWorkspaceProps> =
                 <h2 className="text-sm font-bold font-mono uppercase tracking-wider text-stone-900">
                   Customer Profile & Financial History
                 </h2>
-                <p className="text-xs text-stone-500">Behavioral cadence and transaction health ledger</p>
+                <p className="text-xs text-stone-500">Acme Commerce customer profile and transaction health ledger</p>
               </div>
             </div>
             <span className="px-2 py-0.5 text-[10px] font-mono font-bold uppercase bg-stone-900 text-stone-50 border border-stone-900">

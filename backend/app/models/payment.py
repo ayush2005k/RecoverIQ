@@ -7,7 +7,7 @@ class Payment(Base):
 
     id = Column(String, primary_key=True, index=True)
     customer_id = Column(String, ForeignKey("customers.id"), nullable=False, index=True)
-    merchant_id = Column(String, nullable=False, default="mer_default")
+    merchant_id = Column(String, nullable=False, default="mer_acme_commerce")
     amount = Column(Float, nullable=False)
     currency = Column(String, nullable=False, default="INR")
     payment_method = Column(String, nullable=False)  # card, upi, netbanking, mandate, wallet

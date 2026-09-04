@@ -100,6 +100,9 @@ export const DecisionAuditDrawer: React.FC<DecisionAuditDrawerProps> = ({
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <div className="flex items-center gap-2.5 flex-wrap">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-amber-900 bg-amber-50 px-1.5 py-0.5 border border-amber-300">
+                    ACME COMMERCE
+                  </span>
                   <span className="text-xs font-mono font-bold text-stone-500 uppercase">
                     DECISION AUDIT RECORD
                   </span>

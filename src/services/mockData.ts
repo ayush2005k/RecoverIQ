@@ -8,8 +8,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent9201',
-      customerName: 'Zomato Merchant Ops',
-      email: 'finance@zomato-vendors.in',
+      customerName: 'Rahul Sharma',
+      email: 'rahul.sharma@gmail.com',
       segment: 'Enterprise',
       lifetimeValue: 3840000,
       totalSuccessfulPayments: 142,
@@ -140,8 +140,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Grw4812',
-      customerName: 'UrbanPiper CloudTech',
-      email: 'billing@urbanpiper.com',
+      customerName: 'Priya Mehta',
+      email: 'priya.mehta@acmecustomer.com',
       segment: 'Growth',
       lifetimeValue: 1260000,
       totalSuccessfulPayments: 48,
@@ -235,8 +235,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Smb1049',
-      customerName: 'Kalyan Logistics Hub',
-      email: 'ops@kalyanlogistics.in',
+      customerName: 'Arjun Patel',
+      email: 'arjun.patel@gmail.com',
       segment: 'SMB',
       lifetimeValue: 780000,
       totalSuccessfulPayments: 24,
@@ -246,7 +246,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
       retryFatigueScore: 3.4,
     },
     paymentMethod: 'upi',
-    paymentMethodDetails: 'kalyanops@okhdfcbank',
+    paymentMethodDetails: 'arjunpatel@okhdfcbank',
     failureReason: 'limit_exceeded',
     failureCode: 'ERR_UPI_MAX_AMOUNT_LIMIT',
     failedAt: new Date(Date.now() - 1000 * 60 * 85).toISOString(),
@@ -313,8 +313,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent3901',
-      customerName: 'Delhivery Hub 4',
-      email: 'ap@delhivery-hub.com',
+      customerName: 'Neha Kapoor',
+      email: 'neha.kapoor@gmail.com',
       segment: 'Enterprise',
       lifetimeValue: 5200000,
       totalSuccessfulPayments: 180,
@@ -391,7 +391,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Grw9921',
-      customerName: 'Practo Healthcare Suite',
+      customerName: 'Vikram Malhotra',
       email: 'accounts@practo.com',
       segment: 'Growth',
       lifetimeValue: 2100000,
@@ -452,7 +452,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent8831',
-      customerName: 'Licious Wholesale Ops',
+      customerName: 'Ananya Sen',
       email: 'finance-lead@licious.com',
       segment: 'Enterprise',
       lifetimeValue: 9400000,
@@ -513,8 +513,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Grw3310',
-      customerName: 'Swiggy Partner Cloud',
-      email: 'partnerships@swiggy.in',
+      customerName: 'Rohan Iyer',
+      email: 'rohan.iyer@acmecustomer.co',
       segment: 'Growth',
       lifetimeValue: 1840000,
       totalSuccessfulPayments: 74,
@@ -524,7 +524,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
       retryFatigueScore: 1.8,
     },
     paymentMethod: 'upi',
-    paymentMethodDetails: 'swiggycloud@icici',
+    paymentMethodDetails: 'rohaniyer@icici',
     failureReason: 'customer_dropoff',
     failureCode: 'ERR_USER_ABANDONED_APP',
     failedAt: new Date(Date.now() - 1000 * 60 * 50).toISOString(),
@@ -574,7 +574,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Rtl0092',
-      customerName: 'Razorpay Test Account',
+      customerName: 'Pooja Hegde',
       email: 'qa-tester@rzp-sandbox.in',
       segment: 'Retail',
       lifetimeValue: 45000,
@@ -625,8 +625,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent7701',
-      customerName: 'Flipkart Wholesale Logistics',
-      email: 'vendor-settlements@flipkart.com',
+      customerName: 'Kabir Singhania',
+      email: 'kabir.singhania@acme-client.in',
       segment: 'Enterprise',
       lifetimeValue: 14200000,
       totalSuccessfulPayments: 420,
@@ -676,7 +676,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Smb6412',
-      customerName: 'Chai Point Outlets',
+      customerName: 'Sanjay Verma',
       email: 'billing@chaipoint.in',
       segment: 'SMB',
       lifetimeValue: 640000,
@@ -727,8 +727,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Grw8219',
-      customerName: 'Zepto Darkstores',
-      email: 'finance-hub@zeptonow.com',
+      customerName: 'Aditi Rao',
+      email: 'aditi.rao@gmail.com',
       segment: 'Growth',
       lifetimeValue: 3150000,
       totalSuccessfulPayments: 112,
@@ -778,7 +778,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent1102',
-      customerName: 'Freshworks SaaS India',
+      customerName: 'Divya Nair',
       email: 'treasury@freshworks.com',
       segment: 'Enterprise',
       lifetimeValue: 8900000,
@@ -829,8 +829,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Smb3019',
-      customerName: 'Dunzo Merchant Network',
-      email: 'vendorpay@dunzo.in',
+      customerName: 'Karan Johar',
+      email: 'karan.johar@acmecustomer.co',
       segment: 'SMB',
       lifetimeValue: 420000,
       totalSuccessfulPayments: 19,
@@ -880,7 +880,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent4412',
-      customerName: 'Shadowfax Courier Systems',
+      customerName: 'Ritu Kumar',
       email: 'settlements@shadowfax.in',
       segment: 'Enterprise',
       lifetimeValue: 7200000,
@@ -931,8 +931,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Grw2109',
-      customerName: 'Postman API Platform',
-      email: 'in-billing@postman.com',
+      customerName: 'Manish Malhotra',
+      email: 'in-manish.malhotra@acmecustomer.com',
       segment: 'Growth',
       lifetimeValue: 2400000,
       totalSuccessfulPayments: 88,
@@ -982,7 +982,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent6902',
-      customerName: 'MakeMyTrip Corporate Travel',
+      customerName: 'Gaurav Gupta',
       email: 'b2b-finance@makemytrip.com',
       segment: 'Enterprise',
       lifetimeValue: 11800000,
@@ -1033,7 +1033,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Smb8910',
-      customerName: 'The Whole Truth Foods',
+      customerName: 'Amitabh Das',
       email: 'accounts@thewholetruthfoods.com',
       segment: 'SMB',
       lifetimeValue: 390000,
@@ -1084,7 +1084,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Grw7012',
-      customerName: 'Nykaa E-Commerce Logistics',
+      customerName: 'Meera Joshi',
       email: 'vendorbilling@nykaa.com',
       segment: 'Growth',
       lifetimeValue: 4600000,
@@ -1135,7 +1135,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent0011',
-      customerName: 'Tata Neu Enterprise Cloud',
+      customerName: 'Suresh Raina',
       email: 'cloud-accounts@tatadigital.com',
       segment: 'Enterprise',
       lifetimeValue: 28400000,
@@ -1186,7 +1186,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Smb4491',
-      customerName: 'Blue Tokai Coffee Roasters',
+      customerName: 'Kavita Krishnamurthy',
       email: 'roastery-ops@bluetokaicoffee.com',
       segment: 'SMB',
       lifetimeValue: 580000,
@@ -1237,8 +1237,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Grw5512',
-      customerName: 'Meesho Logistics Fulfillment',
-      email: 'seller-payouts@meesho.com',
+      customerName: 'Devendra Fadnavis',
+      email: 'devendra.fadnavis@acmepartner.in',
       segment: 'Growth',
       lifetimeValue: 5100000,
       totalSuccessfulPayments: 195,
@@ -1288,7 +1288,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Rtl9982',
-      customerName: 'QuickBite Vendor #412',
+      customerName: 'Sunil Gavaskar',
       email: 'quickbite412@gmail.com',
       segment: 'Retail',
       lifetimeValue: 85000,
@@ -1339,7 +1339,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Ent9903',
-      customerName: 'Cleartrip Travel Operations',
+      customerName: 'Sania Mirza',
       email: 'payments@cleartrip.com',
       segment: 'Enterprise',
       lifetimeValue: 16500000,
@@ -1390,7 +1390,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     currency: 'INR',
     customer: {
       customerId: 'cust_Smb7710',
-      customerName: 'Epigamia Gourmet Foods',
+      customerName: 'Bhaichung Bhutia',
       email: 'finance@epigamia.in',
       segment: 'SMB',
       lifetimeValue: 920000,

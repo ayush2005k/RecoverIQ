@@ -59,11 +59,11 @@ export const TopBar: React.FC<TopBarProps> = ({ onRefresh, isRefreshing }) => {
         {/* Merchant Selector */}
         <div className="flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-200 text-xs">
           <div className="w-5 h-5 rounded bg-slate-800 flex items-center justify-center text-[10px] font-bold text-indigo-400 border border-slate-700">
-            RZ
+            AC
           </div>
           <div className="text-left hidden sm:block">
-            <div className="font-semibold text-slate-200 leading-tight">Acme Global Payments</div>
-            <div className="text-[10px] font-mono text-slate-400 leading-tight">MID_89324-DEMO</div>
+            <div className="font-semibold text-slate-200 leading-tight">Acme Commerce</div>
+            <div className="text-[10px] font-mono text-slate-400 leading-tight">MID_ACME_COMMERCE</div>
           </div>
           <ChevronDown className="w-3.5 h-3.5 text-slate-500 ml-1" />
         </div>

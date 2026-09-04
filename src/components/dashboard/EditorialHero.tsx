@@ -17,7 +17,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
       {/* Editorial Category Eyebrow */}
       <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] font-mono tracking-widest uppercase text-stone-500 pb-3 border-b border-[#F0ECE1] mb-6">
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-amber-800">FEATURE ANALYSIS & STRATEGY</span>
+          <span className="font-semibold text-amber-800">ACME COMMERCE • RECOVERY INTELLIGENCE</span>
           <span className="text-stone-300">|</span>
           <span className="text-stone-600">VOL. IX — POLICY GUARDRAILS</span>
         </div>
@@ -47,7 +47,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
 
         {/* Narrative Description */}
         <p className="text-sm sm:text-base text-stone-600 leading-relaxed max-w-3xl">
-          Evaluating failure taxonomy, customer relationship capital, and deterministic regulatory guardrails to orchestrate the single highest expected-value intervention.
+          Acme Commerce connects its failed-payment data to RecoverIQ. RecoverIQ analyzes each customer's failed payment, relationship history, and deterministic regulatory guardrails to orchestrate the safest, highest-value recovery action.
         </p>
 
         {/* Primary Action Buttons */}

@@ -145,6 +145,9 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#E6E2D8]">
         <div>
           <div className="flex items-center gap-2.5">
+            <span className="text-[10px] font-mono uppercase tracking-widest text-emerald-900 font-bold bg-emerald-50 px-2 py-0.5 border border-emerald-300">
+              ACME COMMERCE
+            </span>
             <h1 className="text-2xl sm:text-3xl font-bold font-serif-editorial tracking-tight text-stone-900">
               Decision & Policy Audit Ledger
             </h1>
@@ -153,7 +156,7 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
             </span>
           </div>
           <p className="text-xs sm:text-sm text-stone-600 font-serif-editorial italic mt-0.5">
-            Immutable, read-only audit log of all AI recovery decisions, candidate valuations, and deterministic policy attestations
+            Immutable, read-only audit log of all Acme Commerce AI recovery decisions, candidate valuations, and deterministic policy attestations
           </p>
         </div>
 
