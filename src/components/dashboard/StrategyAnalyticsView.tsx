@@ -17,14 +17,14 @@ export const StrategyAnalyticsView: React.FC<StrategyAnalyticsViewProps> = ({ su
       <div className="pb-4 border-b border-[#E6E2D8]">
         <div className="flex items-center gap-2.5">
           <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-900 font-bold bg-indigo-50 px-2 py-0.5 border border-indigo-300">
-            ACME COMMERCE
+            ACME COMMERCE • BENCHMARK EVALUATION
           </span>
           <h1 className="text-2xl sm:text-3xl font-bold font-serif-editorial tracking-tight text-stone-900">
-            Baseline Benchmark & Lift Attribution
+            Baseline Benchmark: RecoverIQ vs. Fixed Retries
           </h1>
         </div>
         <p className="text-xs sm:text-sm text-stone-600 font-serif-editorial italic mt-0.5">
-          Comparative empirical performance of Acme Commerce AI expected-value orchestration vs static naive retry loops
+          Synthetic evaluation — N=3,000 · Demonstrating recovery conversion gains over static 3-day retry loops
         </p>
       </div>
 
@@ -34,38 +34,38 @@ export const StrategyAnalyticsView: React.FC<StrategyAnalyticsViewProps> = ({ su
           title="RecoverIQ Recovery Rate"
           formattedValue={formatPercent(summary.recoveryRate)}
           icon={<Sparkles className="w-4 h-4 text-stone-800" />}
-          subValue="AI dynamic cadence"
-          badgeText="ACTIVE MODEL"
+          subValue="With AI recovery strategy"
+          badgeText="AI STRATEGY"
           badgeVariant="indigo"
           highlightVariant="indigo"
         />
 
         <MetricCard
-          title="Naive Baseline Rate"
+          title="Fixed Retry Baseline"
           formattedValue={formatPercent(summary.baselineRecoveryRate)}
           icon={<Target className="w-4 h-4 text-stone-500" />}
-          subValue="3-day static retry"
-          badgeText="BASELINE"
+          subValue="Standard 3-day retry practice"
+          badgeText="STATIC 3-DAY"
           badgeVariant="neutral"
           highlightVariant="slate"
         />
 
         <MetricCard
-          title="Incremental Net Lift"
-          formattedValue={`+${summary.incrementalPercentage}%`}
+          title="Additional Revenue"
+          formattedValue={`+${formatINR(summary.incrementalRevenue)}`}
           icon={<TrendingUp className="w-4 h-4 text-emerald-800" />}
-          subValue={formatINR(summary.incrementalRevenue) + ' added'}
-          badgeText="ALPHA"
+          subValue="Extra recovered revenue"
+          badgeText="RECOVERED"
           badgeVariant="gold"
           highlightVariant="gold"
         />
 
         <MetricCard
-          title="Policy Compliance"
-          formattedValue="100%"
+          title="Relative Lift"
+          formattedValue={`+${summary.incrementalPercentage}%`}
           icon={<ShieldCheck className="w-4 h-4 text-emerald-800" />}
-          subValue="0 guardrail violations"
-          badgeText="VERIFIED"
+          subValue="Outperformance over baseline"
+          badgeText="NET GAIN"
           badgeVariant="success"
           highlightVariant="emerald"
         />

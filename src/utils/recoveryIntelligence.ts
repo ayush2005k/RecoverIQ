@@ -188,7 +188,7 @@ export function getAllCanonicalCandidateActions(payment: PaymentRecord): Candida
   // 5. request_payment_method_update
   let updateProb = 0.50;
   let updatePolicy: 'satisfied' | 'restricted' | 'blocked' = 'satisfied';
-  let updateNote = 'Requests customer to update payment instrument via RBI-compliant tokenization flow.';
+  let updateNote = 'Requests customer to update payment instrument via policy-safe tokenization flow.';
 
   if (isCardExpired || isMandateInvalid) {
     updateProb = payment.recoveryProbability > 0.7 ? payment.recoveryProbability : 0.84;
@@ -351,7 +351,7 @@ export function getStructuredDecisionExplanation(payment: PaymentRecord): Struct
   } else if (action === 'send_payment_link') {
     whySelected = `Because the transaction encountered a ${reason.replace(/_/g, ' ')} constraint on the primary instrument, standard automated retries have a sub-5% recovery rate. Dispatching an instant multi-rail payment link provides alternative payment routes (NetBanking, Corporate Credit, UPI Intent) yielding ${formatINR(payment.expectedRecoveryValue)} in expected recovery.`;
   } else if (action === 'request_payment_method_update') {
-    whySelected = `The underlying payment instrument has been flagged as ${reason.replace(/_/g, ' ')}. Direct presentations are blocked by deterministic policy. Initiating an RBI-compliant payment method update workflow secures both the immediate ₹${amount.toLocaleString('en-IN')} invoice and prevents future recurring churn.`;
+    whySelected = `The underlying payment instrument has been flagged as ${reason.replace(/_/g, ' ')}. Direct presentations are blocked by deterministic policy. Initiating a policy-safe payment method update workflow secures both the immediate ₹${amount.toLocaleString('en-IN')} invoice and prevents future recurring churn.`;
   } else if (action === 'escalate_to_human') {
     whySelected = `Given ${cust.customerName}'s high lifetime value (${formatINR(cust.lifetimeValue)}) and critical invoice size (${formatINR(amount)}), an autonomous retry was deprioritized in favor of direct Relationship Manager outreach to avoid customer relationship risk.`;
   } else {

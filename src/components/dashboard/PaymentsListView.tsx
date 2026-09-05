@@ -356,15 +356,14 @@ export const PaymentsListView: React.FC<PaymentsListViewProps> = ({
         <div>
           <div className="flex items-center gap-2">
             <span className="text-[10px] font-mono uppercase tracking-widest text-amber-900 font-bold bg-amber-50 px-2 py-0.5 border border-amber-300">
-              ACME COMMERCE • OPERATIONS WORKLIST • LIVE RECOVERY PIPELINE
+              ACME COMMERCE • RECOVERY WORKLIST
             </span>
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-serif-editorial tracking-tight text-stone-900 mt-1">
-            At-Risk Payments Worklist
+            At-Risk Payments
           </h1>
           <p className="text-xs sm:text-sm text-stone-600 font-serif-editorial italic mt-0.5 max-w-3xl">
-            Real-time operations queue of Acme Commerce customer failed payments with ML recovery attribution,
-            dynamic priority scoring, and deterministic guardrail policy enforcement.
+            Failed payments that need attention, ranked by recovery opportunity.
           </p>
         </div>
 

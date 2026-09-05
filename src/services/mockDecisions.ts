@@ -201,7 +201,7 @@ export const mockHistoricalDecisionsList: DecisionRecord[] = [
     executionStatus: 'succeeded',
     recoveredAmount: 52000,
     modelVersion: 'RecoverIQ XGB-v2.4.1 (Policy Core)',
-    aiExplanationSnippet: 'Customer updated corporate card token via RBI compliant self-service link. Recurring auto-debit succeeded with ₹52,000 recovered.',
+    aiExplanationSnippet: 'Customer updated corporate card token via policy-safe self-service link. Recurring auto-debit succeeded with ₹52,000 recovered.',
     timestamp: new Date(Date.now() - 1000 * 60 * 55).toISOString(),
     failureReason: 'card_expired',
     failureCode: 'ERR_CARD_EXPIRED_54',

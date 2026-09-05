@@ -149,74 +149,61 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
               ACME COMMERCE
             </span>
             <h1 className="text-2xl sm:text-3xl font-bold font-serif-editorial tracking-tight text-stone-900">
-              Decision & Policy Audit Ledger
+              Recent Recovery Decisions
             </h1>
             <span className="px-2 py-0.5 text-[10px] font-mono uppercase bg-stone-900 text-stone-100 font-bold">
               /decisions
             </span>
           </div>
           <p className="text-xs sm:text-sm text-stone-600 font-serif-editorial italic mt-0.5">
-            Immutable, read-only audit log of all Acme Commerce AI recovery decisions, candidate valuations, and deterministic policy attestations
+            Every recovery decision, policy check, and execution outcome.
           </p>
         </div>
 
         <div className="flex items-center gap-2 self-start sm:self-center">
           <div className="flex items-center gap-2 text-xs font-mono text-stone-700 bg-white border border-[#E6E2D8] px-3.5 py-2 shadow-xs">
-            <Lock className="w-3.5 h-3.5 text-amber-700" />
-            <span>Cryptographic Ledger:</span>
-            <span className="font-bold text-stone-900">IMMUTABLE</span>
+            <Lock className="w-3.5 h-3.5 text-stone-600" />
+            <span className="font-bold text-stone-900 uppercase">READ-ONLY AUDIT RECORD</span>
           </div>
         </div>
       </div>
 
-      {/* Top Metric Strip */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      {/* Top Metric Strip (Compact 3-item summary strip) */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div className="bg-white border border-[#E6E2D8] p-4 shadow-xs">
           <div className="text-[10px] font-mono text-stone-500 uppercase tracking-wider">
-            Total Audit Records
+            Total Decisions
           </div>
           <div className="text-xl sm:text-2xl font-mono font-bold text-stone-900 mt-1">
             {totalDecisionsCount}
           </div>
-          <div className="text-[11px] font-mono text-stone-500 mt-1 flex items-center gap-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-            <span>100% Policy Attested</span>
-          </div>
-        </div>
-
-        <div className="bg-white border border-[#E6E2D8] p-4 shadow-xs">
-          <div className="text-[10px] font-mono text-stone-500 uppercase tracking-wider">
-            Evaluated Revenue Volume
-          </div>
-          <div className="text-xl sm:text-2xl font-mono font-bold text-stone-900 mt-1">
-            {formatINR(totalEvaluatedGross)}
-          </div>
           <div className="text-[11px] font-mono text-stone-500 mt-1">
-            Across {totalDecisionsCount} declined invoices
+            Evaluated recovery recommendations
           </div>
         </div>
 
         <div className="bg-white border border-[#E6E2D8] p-4 shadow-xs">
           <div className="text-[10px] font-mono text-stone-500 uppercase tracking-wider">
-            Total Expected Recovery (EV)
-          </div>
-          <div className="text-xl sm:text-2xl font-mono font-bold text-stone-900 mt-1">
-            {formatINR(totalExpectedRecovery)}
-          </div>
-          <div className="text-[11px] font-mono text-emerald-800 font-semibold mt-1">
-            Avg. EV Yield: {formatPercent(totalExpectedRecovery / (totalEvaluatedGross || 1))}
-          </div>
-        </div>
-
-        <div className="bg-white border border-[#E6E2D8] p-4 shadow-xs">
-          <div className="text-[10px] font-mono text-stone-500 uppercase tracking-wider">
-            Settled / Captured Revenue
+            Succeeded Outcomes
           </div>
           <div className="text-xl sm:text-2xl font-mono font-bold text-emerald-800 mt-1">
-            {formatINR(totalActuallyRecovered)}
+            {decisions.filter((d) => d.executionStatus === 'succeeded').length}
+          </div>
+          <div className="text-[11px] font-mono text-emerald-800 mt-1">
+            Simulated or settled recoveries
+          </div>
+        </div>
+
+        <div className="bg-white border border-[#E6E2D8] p-4 shadow-xs">
+          <div className="text-[10px] font-mono text-stone-500 uppercase tracking-wider">
+            Policy Attested
+          </div>
+          <div className="text-xl sm:text-2xl font-mono font-bold text-stone-900 mt-1 flex items-center gap-1.5">
+            <span>100%</span>
+            <span className="w-2 h-2 rounded-full bg-emerald-600 inline-block"></span>
           </div>
           <div className="text-[11px] font-mono text-stone-500 mt-1">
-            Simulated / production captured
+            Zero policy guardrail violations
           </div>
         </div>
       </div>
@@ -226,11 +213,11 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
         <div className="flex items-center gap-2">
           <Database className="w-4 h-4 text-stone-500" />
           <span>
-            <strong className="text-stone-800 font-bold uppercase">[DEMO / SYNTHETIC REPOSITORY]</strong> Displaying simulated audit ledger for demonstration purposes. No live production money movement.
+            <strong className="text-stone-800 font-bold uppercase">[TEST MODE / READ-ONLY AUDIT RECORD]</strong> Displaying decision ledger for demonstration purposes. No live production money movement.
           </span>
         </div>
         <span className="text-[11px] text-stone-500 hidden sm:inline">
-          Ledger Version: 2026.09.02-v2.4
+          Policy Core: Active Guardrails
         </span>
       </div>
 
@@ -372,7 +359,7 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
               }}
               className={`hover:text-stone-900 ${sortField === 'recoveryProbability' ? 'text-stone-900 font-bold underline' : ''}`}
             >
-              Model Score {sortField === 'recoveryProbability' ? (sortAsc ? '↑' : '↓') : ''}
+              Recovery Likelihood {sortField === 'recoveryProbability' ? (sortAsc ? '↑' : '↓') : ''}
             </button>
             <span>•</span>
             <button
@@ -382,7 +369,7 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
               }}
               className={`hover:text-stone-900 ${sortField === 'expectedRecovery' ? 'text-stone-900 font-bold underline' : ''}`}
             >
-              Expected Value {sortField === 'expectedRecovery' ? (sortAsc ? '↑' : '↓') : ''}
+              Expected Recovery {sortField === 'expectedRecovery' ? (sortAsc ? '↑' : '↓') : ''}
             </button>
           </div>
         </div>
@@ -396,15 +383,14 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
               <tr className="bg-[#FAF9F5] text-stone-600 uppercase tracking-wider font-mono text-[10px] border-b border-[#E6E2D8]">
                 <th className="py-3 px-3 font-semibold">Decision ID</th>
                 <th className="py-3 px-3 font-semibold">Payment ID</th>
-                <th className="py-3 px-3 font-semibold">Customer Context</th>
-                <th className="py-3 px-3 font-semibold">Amount (Gross)</th>
-                <th className="py-3 px-3 font-semibold">Model Score</th>
+                <th className="py-3 px-3 font-semibold">Customer</th>
+                <th className="py-3 px-3 font-semibold">Amount</th>
+                <th className="py-3 px-3 font-semibold">Recovery Likelihood</th>
                 <th className="py-3 px-3 font-semibold">Recommended Action</th>
-                <th className="py-3 px-3 font-semibold">Expected Value (EV)</th>
-                <th className="py-3 px-3 font-semibold">Policy Verification</th>
-                <th className="py-3 px-3 font-semibold">Execution Status</th>
+                <th className="py-3 px-3 font-semibold">Expected Recovery</th>
+                <th className="py-3 px-3 font-semibold">Guardrails</th>
+                <th className="py-3 px-3 font-semibold">Outcome</th>
                 <th className="py-3 px-3 font-semibold">Recovered Amount</th>
-                <th className="py-3 px-3 font-semibold">Model Version</th>
                 <th className="py-3 px-3 font-semibold text-right">Timestamp</th>
                 <th className="py-3 px-3 text-center">Audit</th>
               </tr>
@@ -412,7 +398,7 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
             <tbody className="divide-y divide-[#EAE6DD] bg-white font-mono">
               {paginatedDecisions.length === 0 ? (
                 <tr>
-                  <td colSpan={13} className="py-12 text-center text-stone-500 font-serif-editorial italic">
+                  <td colSpan={12} className="py-12 text-center text-stone-500 font-serif-editorial italic">
                     No decision audit records found matching your active filter criteria.
                   </td>
                 </tr>
@@ -435,7 +421,7 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
                       {dec.paymentId}
                     </td>
 
-                    {/* Customer Context */}
+                    {/* Customer */}
                     <td className="py-3.5 px-3 whitespace-nowrap">
                       <div className="font-bold text-stone-900">{dec.customerName}</div>
                       <div className="text-[10px] text-stone-500">
@@ -448,7 +434,7 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
                       {formatINR(dec.amount)}
                     </td>
 
-                    {/* Model Score */}
+                    {/* Recovery Likelihood */}
                     <td className="py-3.5 px-3 whitespace-nowrap">
                       <span className="font-bold text-emerald-800 bg-emerald-50 px-1.5 py-0.5 border border-emerald-200">
                         {formatPercent(dec.recoveryProbability)}
@@ -462,12 +448,12 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
                       </div>
                     </td>
 
-                    {/* Expected Recovery Value (EV) */}
+                    {/* Expected Recovery */}
                     <td className="py-3.5 px-3 font-bold text-stone-900 whitespace-nowrap">
                       {formatINR(dec.expectedRecovery)}
                     </td>
 
-                    {/* Policy Verification */}
+                    {/* Guardrails */}
                     <td className="py-3.5 px-3 whitespace-nowrap">
                       <div className="flex items-center gap-1.5">
                         <PolicyBadge status={dec.policyStatus} />
@@ -477,7 +463,7 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
                       </div>
                     </td>
 
-                    {/* Execution Status */}
+                    {/* Outcome */}
                     <td className="py-3.5 px-3 whitespace-nowrap">
                       <ExecutionBadge status={dec.executionStatus} />
                     </td>
@@ -489,11 +475,6 @@ export const DecisionsAuditView: React.FC<DecisionsAuditViewProps> = ({
                       ) : (
                         <span className="text-stone-400">₹0</span>
                       )}
-                    </td>
-
-                    {/* Model Version */}
-                    <td className="py-3.5 px-3 text-[10px] text-stone-500 whitespace-nowrap">
-                      {dec.modelVersion || 'XGB-v2.4.1'}
                     </td>
 
                     {/* Timestamp */}

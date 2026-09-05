@@ -32,10 +32,10 @@ export const EditorialHeader: React.FC<EditorialHeaderProps> = ({
       {/* Masthead Bar */}
       <div className="border-b border-[#E6E2D8] px-4 sm:px-8 py-1.5 text-[11px] font-mono tracking-widest uppercase text-stone-500 flex flex-wrap items-center justify-between gap-2">
         <div className="font-semibold text-stone-700">
-          THE RECOVERY LEDGER & DECISION REPOSITORY
+          RECOVERIQ — REVENUE RECOVERY CONTROL TOWER
         </div>
         <div className="hidden md:block italic text-stone-500 tracking-normal font-serif-editorial text-xs">
-          VOL. IX — AUTONOMOUS POLICY & OPTIMIZATION ENGINE
+          ACME COMMERCE • REVENUE RECOVERY ENGINE
         </div>
         <div className="flex items-center gap-3">
           <span className="inline-flex items-center gap-1.5 text-emerald-700 font-semibold">

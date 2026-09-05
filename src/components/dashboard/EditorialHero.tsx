@@ -27,7 +27,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
           </span>
           <span className="font-mono text-[10px] text-emerald-700 font-semibold flex items-center gap-1">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-            AUTONOMOUS
+            ONLINE
           </span>
         </div>
       </div>

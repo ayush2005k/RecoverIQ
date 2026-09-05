@@ -41,18 +41,16 @@ export const Layout: React.FC<LayoutProps> = ({
       </main>
 
       {/* Editorial Colophon / Footer */}
-      <footer className="border-t border-[#E6E2D8] bg-[#FAF9F5] py-6 px-4 sm:px-8 text-xs font-mono text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-4 mt-auto">
+      <footer className="border-t border-[#E6E2D8] bg-[#FAF9F5] py-5 px-4 sm:px-8 text-xs font-mono text-stone-500 flex flex-col sm:flex-row items-center justify-between gap-4 mt-auto">
         <div className="flex items-center gap-3">
-          <span className="font-semibold text-stone-800">RECOVERIQ DECISION REPOSITORY</span>
+          <span className="font-semibold text-stone-800">RECOVERIQ</span>
           <span>•</span>
-          <span className="font-serif-editorial italic text-stone-600">Autonomous Expected-Value Engine</span>
+          <span className="font-serif-editorial italic text-stone-600">Revenue Recovery Control Tower</span>
         </div>
         <div className="flex items-center gap-4 text-[11px] text-stone-500">
-          <span>LATENCY: 42MS</span>
+          <span>TEST MODE</span>
           <span>•</span>
-          <span>ORCHESTRATION: NPCI / VISA / MASTERCARD / RBI COMPLIANT</span>
-          <span>•</span>
-          <span className="text-emerald-700 font-semibold">ALL GUARDRAILS ACTIVE</span>
+          <span className="text-emerald-700 font-semibold">POLICY GUARDRAILS ACTIVE</span>
         </div>
       </footer>
     </div>

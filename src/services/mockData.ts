@@ -345,7 +345,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
         confidence: 0.92,
         isRecommended: true,
         policyStatus: 'satisfied',
-        policyNotes: 'Directs user to secure self-serve card update portal with RBI tokenization.',
+        policyNotes: 'Directs user to secure self-serve card update portal with policy-safe tokenization.',
       },
       {
         action: 'send_payment_link',
@@ -372,16 +372,16 @@ export const mockDetailedPayments: PaymentRecord[] = [
       {
         id: 'rule_1',
         ruleName: 'Expired Instrument Presentation Policy',
-        description: 'Card network and RBI tokenization compliance',
+        description: 'Card network and tokenization compliance',
         status: 'passed',
         detail: 'Direct retries automatically suppressed for expired card token.',
       },
       {
         id: 'rule_2',
-        ruleName: 'RBI Tokenization Self-Serve Active',
+        ruleName: 'Tokenization Self-Serve Active',
         description: 'Secure co-badged tokenization flow',
         status: 'passed',
-        detail: 'Token update workflow certified compliant.',
+        detail: 'Token update workflow verified policy-safe.',
       },
     ],
   },
@@ -766,9 +766,9 @@ export const mockDetailedPayments: PaymentRecord[] = [
       {
         id: 'rule_1',
         ruleName: 'Multi-Factor Re-authentication Policy',
-        description: 'RBI guidelines for card 2FA recovery links',
+        description: 'Multi-factor authentication guidelines for card recovery links',
         status: 'passed',
-        detail: 'RBI Tokenization & 3DS2 compliant.',
+        detail: 'Secure tokenization & 3DS2 compliant.',
       },
     ],
   },
@@ -912,7 +912,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
         confidence: 0.91,
         isRecommended: true,
         policyStatus: 'satisfied',
-        policyNotes: 'Directs to RBI-certified token renewal interface.',
+        policyNotes: 'Directs to policy-safe token renewal interface.',
       },
     ],
     guardrails: [
@@ -1085,7 +1085,7 @@ export const mockDetailedPayments: PaymentRecord[] = [
     customer: {
       customerId: 'cust_Grw7012',
       customerName: 'Meera Joshi',
-      email: 'vendorbilling@nykaa.com',
+      email: 'meera.joshi@enterprise-client.in',
       segment: 'Growth',
       lifetimeValue: 4600000,
       totalSuccessfulPayments: 165,
