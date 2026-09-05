@@ -732,7 +732,7 @@ export const PaymentsListView: React.FC<PaymentsListViewProps> = ({
                   className="py-3 px-3 cursor-pointer hover:bg-stone-200/60 transition-colors group whitespace-nowrap min-w-[180px]"
                 >
                   <div className="flex items-center gap-1.5">
-                    <span>Customer Context</span>
+                    <span>Customer</span>
                     {renderSortIndicator('customer')}
                   </div>
                 </th>
@@ -776,7 +776,7 @@ export const PaymentsListView: React.FC<PaymentsListViewProps> = ({
                   className="py-3 px-3 cursor-pointer hover:bg-stone-200/60 transition-colors group whitespace-nowrap"
                 >
                   <div className="flex items-center gap-1.5">
-                    <span>Recovery Prob</span>
+                    <span>Recovery Likelihood</span>
                     {renderSortIndicator('recoveryProbability')}
                   </div>
                 </th>
@@ -787,7 +787,7 @@ export const PaymentsListView: React.FC<PaymentsListViewProps> = ({
                   className="py-3 px-3 cursor-pointer hover:bg-stone-200/60 transition-colors group whitespace-nowrap"
                 >
                   <div className="flex items-center gap-1.5">
-                    <span>Expected Value</span>
+                    <span>Expected Recovery</span>
                     {renderSortIndicator('expectedRecoveryValue')}
                   </div>
                 </th>
@@ -798,7 +798,7 @@ export const PaymentsListView: React.FC<PaymentsListViewProps> = ({
                   className="py-3 px-3 cursor-pointer hover:bg-stone-200/60 transition-colors group whitespace-nowrap"
                 >
                   <div className="flex items-center gap-1.5">
-                    <span>AI Action</span>
+                    <span>RecoverIQ Recommends</span>
                     {renderSortIndicator('recommendedAction')}
                   </div>
                 </th>
@@ -827,7 +827,7 @@ export const PaymentsListView: React.FC<PaymentsListViewProps> = ({
 
                 {/* Inspect Action */}
                 <th className="py-3 px-3 text-right whitespace-nowrap">
-                  <span>Inspect</span>
+                  <span>View Decision</span>
                 </th>
               </tr>
             </thead>
@@ -937,7 +937,7 @@ export const PaymentsListView: React.FC<PaymentsListViewProps> = ({
                       <StatusBadge status={item.status} />
                     </td>
 
-                    {/* Inspect Button */}
+                    {/* View Decision Button */}
                     <td className="py-3 px-3 text-right whitespace-nowrap">
                       <button
                         onClick={(e) => {
@@ -946,7 +946,7 @@ export const PaymentsListView: React.FC<PaymentsListViewProps> = ({
                         }}
                         className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-mono font-bold uppercase tracking-wider bg-white border border-stone-800 text-stone-900 group-hover:bg-stone-900 group-hover:text-stone-50 transition-colors shadow-xs"
                       >
-                        <span>Inspect</span>
+                        <span>View Decision</span>
                         <ArrowUpRight className="w-3 h-3" />
                       </button>
                     </td>

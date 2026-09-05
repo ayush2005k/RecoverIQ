@@ -284,7 +284,7 @@ export function getStandardPolicyGuardrails(payment: PaymentRecord): GuardrailIt
       id: 'g_retry_limit',
       category: 'retry_limit',
       ruleName: 'Retry Threshold Limit',
-      description: 'Maximum allowable automated retries per billing cycle (RBI/Acquirer quota)',
+      description: 'Maximum allowable automated retries per billing cycle (merchant policy quota)',
       status: isRetriesExhausted ? 'failed' : 'passed',
       statusLabel: isRetriesExhausted ? 'BLOCK' : 'PASS',
       detail: isRetriesExhausted

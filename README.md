@@ -13,7 +13,7 @@ When a recurring subscription, invoice, or checkout payment fails, legacy billin
 RecoverIQ replaces blind retries with:
 1. **ML-Driven Base Recovery Predictions**: Evaluates customer payment history, ticket amount, failure codes, and banking cadence.
 2. **Action-Specific Expected Value Optimization**: Evaluates all 7 canonical recovery actions and calculates Expected Recovery Value ($\text{EV} = \text{Amount} \times P(\text{success} \mid \text{action})$).
-3. **Deterministic Policy Guardrails**: Enforces non-negotiable regulatory, issuer, and contact rules (RBI retry thresholds, 72-hour recovery window, contact cooldown, rail health).
+3. **Deterministic Policy Guardrails**: Enforces non-negotiable merchant policy, rail, and contact rules (retry limits, 72-hour recovery window, contact cooldown, rail health).
 4. **Evidence-Based Structured Explanations**: Generates transparent, auditable post-decision rationales without claiming unverified network state.
 5. **Synthetic Rail Simulation & Audit**: Executes test-mode recovery on synthetic payment rails with immutable audit trail logging.
 

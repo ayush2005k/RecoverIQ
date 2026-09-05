@@ -304,7 +304,7 @@ export const PaymentDecisionWorkspace: React.FC<PaymentDecisionWorkspaceProps> =
               </div>
               <div className="h-8 w-[1px] bg-[#E6E2D8]" />
               <div className="text-right">
-                <div className="text-[10px] uppercase font-mono text-emerald-800 font-bold">Expected Recovery (EV)</div>
+                <div className="text-[10px] uppercase font-mono text-emerald-800 font-bold">Expected Recovery</div>
                 <div className="font-mono font-bold text-emerald-900 text-lg sm:text-xl">
                   {formatINR(payment.expectedRecoveryValue, { compact: false })}
                 </div>
@@ -513,7 +513,7 @@ export const PaymentDecisionWorkspace: React.FC<PaymentDecisionWorkspaceProps> =
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {/* Recovery Probability */}
             <div className="p-3 bg-[#FAF9F5] border border-[#E6E2D8] space-y-1">
-              <div className="text-[10px] font-mono text-stone-500 uppercase">Recovery Prob</div>
+              <div className="text-[10px] font-mono text-stone-500 uppercase">Recovery Likelihood</div>
               <div className="font-mono font-bold text-base text-stone-900">
                 {formatPercent(payment.recoveryProbability)}
               </div>
@@ -522,11 +522,11 @@ export const PaymentDecisionWorkspace: React.FC<PaymentDecisionWorkspaceProps> =
 
             {/* Expected Recovery Value */}
             <div className="p-3 bg-[#FAF9F5] border border-[#E6E2D8] space-y-1">
-              <div className="text-[10px] font-mono text-emerald-800 font-bold uppercase">Expected Value (EV)</div>
+              <div className="text-[10px] font-mono text-emerald-800 font-bold uppercase">Expected Recovery</div>
               <div className="font-mono font-bold text-base text-emerald-900">
                 {formatINR(payment.expectedRecoveryValue)}
               </div>
-              <div className="text-[10px] text-stone-500 font-mono">Prob × Gross</div>
+              <div className="text-[10px] text-stone-500 font-mono">Likelihood × Gross</div>
             </div>
 
             {/* Confidence Score */}
@@ -538,7 +538,7 @@ export const PaymentDecisionWorkspace: React.FC<PaymentDecisionWorkspaceProps> =
 
             {/* Recommended Action */}
             <div className="p-3 bg-amber-50/50 border border-amber-300 space-y-1">
-              <div className="text-[10px] font-mono text-amber-950 font-bold uppercase">Recommended Action</div>
+              <div className="text-[10px] font-mono text-amber-950 font-bold uppercase">Selected Action</div>
               <div className="font-mono font-bold text-xs text-amber-950 truncate">
                 {formatActionShortLabel(payment.recommendedAction)}
               </div>
@@ -747,10 +747,10 @@ export const PaymentDecisionWorkspace: React.FC<PaymentDecisionWorkspaceProps> =
             </div>
             <div>
               <h3 className="text-sm font-bold font-mono uppercase tracking-wider text-stone-900">
-                Structured Decision Explanation
+                WHY RECOVERIQ CHOSE THIS ACTION
               </h3>
-              <p className="text-xs text-stone-500">
-                Post-decision evidence-based telemetry and comparative trade-off breakdown
+              <p className="text-xs text-stone-500 font-serif-editorial italic">
+                Evidence-based decision breakdown and comparative trade-off analysis
               </p>
             </div>
           </div>

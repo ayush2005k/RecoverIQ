@@ -178,29 +178,24 @@ export default function App() {
     setIsRunningStrategy(true);
     setStrategyNotification(null);
     try {
-      const metrics = await api.getMetrics();
-      const updatedSummary = await api.getDashboardSummary();
+      const [metrics, updatedSummary] = await Promise.all([
+        api.getMetrics(),
+        api.getDashboardSummary(),
+      ]);
       setSummary(updatedSummary);
+      const count = metrics.evaluationSampleCount || 3000;
       setStrategyNotification(
-        `AI Recovery Decision Engine evaluated ${metrics.evaluationSampleCount.toLocaleString(
-          'en-IN'
-        )} pipeline targets. RecoverIQ Recovery Rate: ${(
-          metrics.recoveryComparison.recoveriq.recovery_rate * 100
-        ).toFixed(1)}% vs ${(
-          metrics.recoveryComparison.baseline.recovery_rate * 100
-        ).toFixed(1)}% baseline (+${metrics.recoveryComparison.incremental.relative_lift_percentage}% lift).`
+        `RECOVERIQ STRATEGY EVALUATED — ${count.toLocaleString('en-IN')} payments analyzed · metrics refreshed`
       );
       setTimeout(() => {
         setStrategyNotification(null);
-      }, 6000);
+      }, 4500);
     } catch (err: any) {
       console.error('Run strategy error:', err);
-      setStrategyNotification(
-        'AI Recovery Decision Engine refreshed telemetry from backend.'
-      );
+      setStrategyNotification('Strategy evaluation failed. Please retry.');
       setTimeout(() => {
         setStrategyNotification(null);
-      }, 4000);
+      }, 4500);
     } finally {
       setIsRunningStrategy(false);
     }

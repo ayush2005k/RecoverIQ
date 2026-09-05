@@ -25,7 +25,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onRefresh, isRefreshing }) => {
               </span>
             </div>
             <p className="text-[11px] text-slate-400 font-medium hidden md:block">
-              AI Revenue Recovery Intelligence
+              AI-powered recovery decisions for failed payments.
             </p>
           </div>
         </div>

@@ -47,7 +47,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
 
         {/* Narrative Description */}
         <p className="text-sm sm:text-base text-stone-600 leading-relaxed max-w-3xl">
-          Acme Commerce connects its failed-payment data to RecoverIQ. RecoverIQ analyzes each customer's failed payment, relationship history, and deterministic regulatory guardrails to orchestrate the safest, highest-value recovery action.
+          Acme Commerce connects its failed-payment data to RecoverIQ. RecoverIQ analyzes each customer's failed payment, relationship history, and deterministic policy guardrails to orchestrate the safest, highest-value recovery action.
         </p>
 
         {/* Primary Action Buttons */}
@@ -58,7 +58,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({
             className="flex items-center gap-2 px-5 py-3 bg-stone-900 hover:bg-stone-800 text-stone-50 text-xs font-mono font-bold uppercase tracking-wider transition-all border border-stone-900 shadow-sm active:scale-[0.98]"
           >
             <Sparkles className={`w-4 h-4 text-amber-400 ${isRunningStrategy ? 'animate-spin' : ''}`} />
-            <span>{isRunningStrategy ? 'Evaluating Neural Models...' : 'RUN AI STRATEGY'}</span>
+            <span>{isRunningStrategy ? 'Evaluating recovery strategy...' : 'RUN AI STRATEGY'}</span>
           </button>
 
           <button

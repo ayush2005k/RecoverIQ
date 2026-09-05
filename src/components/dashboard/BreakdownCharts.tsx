@@ -18,11 +18,16 @@ export const BreakdownCharts: React.FC<BreakdownChartsProps> = ({
       <div className="bg-white border border-[#E6E2D8] p-5 sm:p-6 shadow-sm flex flex-col justify-between space-y-4">
         <div>
           <div className="flex items-center justify-between pb-3 border-b border-[#F0ECE1] mb-4">
-            <div className="flex items-center gap-2">
-              <Layers className="w-4 h-4 text-stone-700" />
-              <h3 className="text-sm font-bold font-mono uppercase tracking-wider text-stone-900">
-                Recovery Yield by Decline Reason
-              </h3>
+            <div>
+              <div className="flex items-center gap-2">
+                <Layers className="w-4 h-4 text-stone-700" />
+                <h3 className="text-sm font-bold font-mono uppercase tracking-wider text-stone-900">
+                  WHERE RECOVERY WORKS BEST
+                </h3>
+              </div>
+              <p className="text-xs text-stone-500 font-serif-editorial italic mt-0.5">
+                Recovery performance by payment failure reason.
+              </p>
             </div>
             <span className="text-[10px] font-mono text-stone-500 uppercase">
               CONVERSION EFFICIENCY
@@ -71,11 +76,16 @@ export const BreakdownCharts: React.FC<BreakdownChartsProps> = ({
       <div className="bg-white border border-[#E6E2D8] p-5 sm:p-6 shadow-sm flex flex-col justify-between space-y-4">
         <div>
           <div className="flex items-center justify-between pb-3 border-b border-[#F0ECE1] mb-4">
-            <div className="flex items-center gap-2">
-              <CreditCard className="w-4 h-4 text-stone-700" />
-              <h3 className="text-sm font-bold font-mono uppercase tracking-wider text-stone-900">
-                Recovery Yield by Instrument Type
-              </h3>
+            <div>
+              <div className="flex items-center gap-2">
+                <CreditCard className="w-4 h-4 text-stone-700" />
+                <h3 className="text-sm font-bold font-mono uppercase tracking-wider text-stone-900">
+                  RECOVERY BY PAYMENT METHOD
+                </h3>
+              </div>
+              <p className="text-xs text-stone-500 font-serif-editorial italic mt-0.5">
+                Which payment methods recover best?
+              </p>
             </div>
             <span className="text-[10px] font-mono text-stone-500 uppercase">
               VOLUME & CAPTURE

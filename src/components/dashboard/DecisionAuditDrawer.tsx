@@ -560,7 +560,7 @@ export const DecisionAuditDrawer: React.FC<DecisionAuditDrawerProps> = ({
                     {
                       id: 'g1',
                       ruleName: 'Retry Limit Threshold',
-                      description: 'Verifies consumed retry count does not exceed regulatory limit of 3 retries per billing cycle.',
+                      description: 'Verifies consumed retry count does not exceed policy limit of 3 retries per billing cycle.',
                       status: 'passed' as const,
                       detail: '0 of 3 retries consumed. Gate Status: PASS.',
                     },

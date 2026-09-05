@@ -49,70 +49,82 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
 
       {/* 2. Key Institutional Metrics */}
       <div>
-        <div className="flex items-center justify-between pb-2 mb-3 border-b border-[#E6E2D8] text-[11px] font-mono uppercase tracking-wider text-stone-500">
-          <span className="font-semibold text-stone-800">Executive Summary & Capital At Risk</span>
-          <span>Cycle: Aug – Sep 2026</span>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-2 mb-3 border-b border-[#E6E2D8] text-[11px] font-mono uppercase tracking-wider text-stone-500 gap-2">
+          <div className="flex items-center gap-2">
+            <span className="font-semibold text-stone-800">Executive Summary & Capital At Risk</span>
+            <span className="px-2 py-0.5 bg-amber-50 text-amber-900 border border-amber-300 text-[10px] font-bold">
+              ACME COMMERCE
+            </span>
+          </div>
+          <div className="flex items-center gap-2 text-[10px]">
+            <span className="px-1.5 py-0.5 bg-stone-100 text-stone-700 border border-stone-200">
+              Cards 1–2: Current Operational Cycle
+            </span>
+            <span className="px-1.5 py-0.5 bg-emerald-50 text-emerald-800 border border-emerald-200">
+              Cards 3–5: Synthetic Benchmark (N=3,000)
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
-          {/* Revenue At Risk */}
+          {/* Card 1: Revenue At Risk */}
           <MetricCard
             title="Revenue At Risk"
             amount={summary.revenueAtRisk}
             icon={<AlertOctagon className="w-4 h-4 text-amber-600" />}
-            subValue={`${summary.activeCasesCount.toLocaleString('en-IN')} active declines`}
+            subValue="Failed payments currently requiring recovery."
             badgeText="AT RISK"
             badgeVariant="warning"
             highlightVariant="amber"
-            tooltip="Total gross volume of failed and at-risk payments"
+            tooltip="Current Operational Cycle: Unresolved failed payments in active queue"
           />
 
-          {/* Predicted Recoverable */}
+          {/* Card 2: Estimated Recoverable */}
           <MetricCard
-            title="Predicted Recoverable"
+            title="Estimated Recoverable"
             amount={summary.predictedRecoverableRevenue}
             icon={<Sparkles className="w-4 h-4 text-indigo-700" />}
-            subValue="75.0% expected value yield"
-            badgeText="MAX EV"
+            subValue="Expected value from eligible recovery actions."
+            badgeText="ESTIMATED"
             badgeVariant="indigo"
             highlightVariant="indigo"
-            tooltip="Theoretical recoverable maximum based on optimal action ranking"
+            tooltip="Current Operational Cycle: Expected recovery value across active cases"
           />
 
-          {/* Revenue Recovered */}
+          {/* Card 3: Revenue Recovered */}
           <MetricCard
             title="Revenue Recovered"
             amount={summary.revenueRecovered}
             icon={<TrendingUp className="w-4 h-4 text-emerald-700" />}
-            subValue={`${summary.totalCasesProcessed.toLocaleString('en-IN')} cases resolved`}
+            subValue="Revenue successfully recovered · Synthetic benchmark"
             badgeText="REALIZED"
             badgeVariant="success"
             highlightVariant="emerald"
-            tooltip="Actual revenue successfully recovered via AI interventions"
+            tooltip="Synthetic Benchmark (N=3,000): Cumulative revenue successfully recovered"
           />
 
-          {/* Incremental Lift */}
+          {/* Card 4: Additional Revenue */}
           <MetricCard
-            title="Incremental Lift"
+            title="Additional Revenue"
             amount={summary.incrementalRevenue}
             icon={<ArrowUpRight className="w-4 h-4 text-emerald-700" />}
-            subValue={`+${summary.incrementalPercentage}% vs static retry`}
-            badgeText={`+${summary.incrementalPercentage}%`}
+            subValue="Extra revenue vs. fixed-retry baseline · Synthetic benchmark"
+            badgeText={`+${summary.incrementalPercentage}% LIFT`}
             badgeVariant="gold"
             highlightVariant="gold"
-            tooltip="Additional revenue recovered above standard 3-day naive retry baseline"
+            tooltip="Synthetic Benchmark (N=3,000): Extra revenue recovered above fixed-retry baseline"
           />
 
-          {/* Recovery Rate */}
+          {/* Card 5: Recovery Rate */}
           <MetricCard
             title="Recovery Rate"
             formattedValue={formatPercent(summary.recoveryRate)}
             icon={<Percent className="w-4 h-4 text-stone-700" />}
-            subValue={`vs ${formatPercent(summary.baselineRecoveryRate)} baseline`}
-            badgeText={`+${((summary.recoveryRate - summary.baselineRecoveryRate) * 100).toFixed(1)}%`}
+            subValue="Share of evaluated payments successfully recovered"
+            badgeText={`vs. ${formatPercent(summary.baselineRecoveryRate)} baseline`}
             badgeVariant="neutral"
             highlightVariant="slate"
-            tooltip="Current recovery conversion percentage compared to baseline"
+            tooltip="Synthetic Benchmark (N=3,000): RecoverIQ recovery conversion vs fixed-retry baseline"
           />
         </div>
       </div>

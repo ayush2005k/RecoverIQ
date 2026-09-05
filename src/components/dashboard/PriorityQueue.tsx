@@ -39,15 +39,15 @@ export const PriorityQueue: React.FC<PriorityQueueProps> = ({ cases, onSelectPay
           <thead>
             <tr className="bg-[#FAF9F5] text-stone-600 uppercase tracking-wider font-mono text-[10px] border-b border-[#E6E2D8]">
               <th className="py-2.5 px-3">Payment ID</th>
-              <th className="py-2.5 px-3">Customer Context</th>
-              <th className="py-2.5 px-3">Gross Amount</th>
+              <th className="py-2.5 px-3">Customer</th>
+              <th className="py-2.5 px-3">Amount</th>
               <th className="py-2.5 px-3">Payment Method</th>
-              <th className="py-2.5 px-3">Decline Cause</th>
-              <th className="py-2.5 px-3">ML Prob</th>
-              <th className="py-2.5 px-3">Expected Value</th>
-              <th className="py-2.5 px-3">AI Recommended Action</th>
+              <th className="py-2.5 px-3">Failure Reason</th>
+              <th className="py-2.5 px-3">Recovery Likelihood</th>
+              <th className="py-2.5 px-3">Expected Recovery</th>
+              <th className="py-2.5 px-3">RecoverIQ Recommends</th>
               <th className="py-2.5 px-3">Priority</th>
-              <th className="py-2.5 px-3 text-right">Inspect</th>
+              <th className="py-2.5 px-3 text-right">View Decision</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-[#EAE6DD] bg-white">
@@ -120,7 +120,7 @@ export const PriorityQueue: React.FC<PriorityQueueProps> = ({ cases, onSelectPay
                       if (onSelectPayment) onSelectPayment(item);
                     }}
                   >
-                    <span>Inspect</span>
+                    <span>View Decision</span>
                     <ChevronRight className="w-3.5 h-3.5" />
                   </button>
                 </td>

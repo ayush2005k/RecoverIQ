@@ -867,8 +867,8 @@ export const mockDetailedPayments: PaymentRecord[] = [
     guardrails: [
       {
         id: 'rule_1',
-        ruleName: 'Wallet Regulatory Limits',
-        description: 'RBI PPI limits enforced on prepaid instruments',
+        ruleName: 'Wallet Policy Limits',
+        description: 'Monthly wallet limits enforced on prepaid instruments',
         status: 'passed',
         detail: 'Wallet debit suppressed.',
       },

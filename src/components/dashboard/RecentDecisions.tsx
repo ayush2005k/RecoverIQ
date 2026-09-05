@@ -20,10 +20,10 @@ export const RecentDecisions: React.FC<RecentDecisionsProps> = ({ decisions, onS
           </div>
           <div>
             <h3 className="text-sm font-bold font-mono uppercase tracking-wider text-stone-900">
-              Recent Decision Repository
+              RECENT RECOVERY DECISIONS
             </h3>
-            <p className="text-xs text-stone-500">
-              Immutable log of recovery actions scored, policy-verified, and dispatched
+            <p className="text-xs text-stone-500 font-serif-editorial italic">
+              Every recovery decision, policy check, and execution outcome.
             </p>
           </div>
         </div>
@@ -50,12 +50,12 @@ export const RecentDecisions: React.FC<RecentDecisionsProps> = ({ decisions, onS
             <tr className="bg-[#FAF9F5] text-stone-600 uppercase tracking-wider font-mono text-[10px] border-b border-[#E6E2D8]">
               <th className="py-2.5 px-3">Decision ID</th>
               <th className="py-2.5 px-3">Payment ID</th>
-              <th className="py-2.5 px-3">Customer Context</th>
-              <th className="py-2.5 px-3">Model Score</th>
-              <th className="py-2.5 px-3">Action Dispatched</th>
-              <th className="py-2.5 px-3">Expected Value</th>
-              <th className="py-2.5 px-3">Policy Verification</th>
-              <th className="py-2.5 px-3">Execution State</th>
+              <th className="py-2.5 px-3">Customer</th>
+              <th className="py-2.5 px-3">Recovery Likelihood</th>
+              <th className="py-2.5 px-3">Recommended Action</th>
+              <th className="py-2.5 px-3">Expected Recovery</th>
+              <th className="py-2.5 px-3">Guardrails</th>
+              <th className="py-2.5 px-3">Outcome</th>
               <th className="py-2.5 px-3 text-right">Timestamp</th>
             </tr>
           </thead>

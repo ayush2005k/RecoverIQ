@@ -34,15 +34,15 @@ export const RecoveryVsBaselineChart: React.FC<RecoveryVsBaselineChartProps> = (
         <div className="bg-[#FAF9F5] border border-stone-800 p-3 shadow-md text-xs space-y-1.5 font-mono">
           <p className="font-bold text-stone-900 border-b border-stone-300 pb-1">{label} Telemetry</p>
           <div className="flex items-center justify-between gap-4 text-emerald-900 font-semibold">
-            <span>RecoverIQ (AI Strategy):</span>
+            <span>RecoverIQ (AI Recovery):</span>
             <span className="font-bold">{formatINR(aiVal, { compact: false })}</span>
           </div>
           <div className="flex items-center justify-between gap-4 text-stone-600">
-            <span>Naive Fixed Retry (Baseline):</span>
+            <span>Fixed Retries (Standard Practice):</span>
             <span className="font-semibold">{formatINR(baselineVal, { compact: false })}</span>
           </div>
           <div className="pt-1.5 border-t border-stone-300 flex items-center justify-between gap-4 text-amber-950 font-bold">
-            <span>Realized Alpha / Lift:</span>
+            <span>Additional Revenue:</span>
             <span>+{formatINR(delta, { compact: true })}</span>
           </div>
         </div>
@@ -60,16 +60,16 @@ export const RecoveryVsBaselineChart: React.FC<RecoveryVsBaselineChartProps> = (
           </div>
           <div>
             <h3 className="text-sm font-bold font-mono uppercase tracking-wider text-stone-900">
-              RecoverIQ AI Strategy vs. Naive Baseline
+              DOES RECOVERIQ BEAT FIXED RETRIES?
             </h3>
-            <p className="text-xs text-stone-500">
-              Cumulative recovered revenue comparison over current synthetic billing cycle
+            <p className="text-xs text-stone-500 font-serif-editorial italic">
+              Cumulative recovered revenue — synthetic evaluation, N=3,000
             </p>
           </div>
         </div>
         <div className="flex items-center gap-2 self-start sm:self-auto">
           <div className="px-3 py-1 bg-amber-50 border border-amber-300 text-amber-950 text-xs font-mono font-bold">
-            +{formatINR(incrementalRevenue, { compact: true })} (+{incrementalPercentage}%) Alpha
+            +{formatINR(incrementalRevenue, { compact: true })} (+{incrementalPercentage}%) Additional Revenue
           </div>
         </div>
       </div>
@@ -109,7 +109,7 @@ export const RecoveryVsBaselineChart: React.FC<RecoveryVsBaselineChartProps> = (
               wrapperStyle={{ fontSize: '11px', paddingTop: '10px', fontFamily: 'JetBrains Mono' }}
               formatter={(value) => (
                 <span className="text-stone-800 font-medium">
-                  {value === 'aiRecovered' ? 'RecoverIQ Autonomous Engine' : 'Naive Fixed 3-Day Retry Baseline'}
+                  {value === 'aiRecovered' ? 'RecoverIQ (AI Recovery)' : 'Fixed Retries (Standard Practice)'}
                 </span>
               )}
             />
