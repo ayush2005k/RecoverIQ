@@ -1,4 +1,4 @@
-# RecoverI
+# Recover
 
 **AI-powered revenue recovery decision engine for failed payments.**
 
